@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario para cadastro de moveis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Móveis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-light py-5">
+
+  <div class="container">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-dark text-white">
+        <h2 class="mb-0"><i class="bi bi-box-seam"></i> Cadastro de Móveis</h2>
+      </div>
+      <div class="card-body">
+        <form>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="nomeMovel" class="form-label">Nome do Móvel</label>
+              <input type="text" class="form-control" id="nomeMovel" placeholder="Ex: Mesa de Jantar">
+            </div>
+            <div class="col-md-6">
+              <label for="tipoMovel" class="form-label">Tipo</label>
+              <select class="form-select" id="tipoMovel">
+                <option selected disabled>Selecione o tipo</option>
+                <option>Cadeira</option>
+                <option>Armário</option>
+                <option>Estante</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="materialMovel" class="form-label">Material</label>
+              <input type="text" class="form-control" id="materialMovel" placeholder="Madeira, Metal, etc.">
+            </div>
+            <div class="col-md-4">
+              <label for="corMovel" class="form-label">Cor</label>
+              <input type="text" class="form-control" id="corMovel" placeholder="Cor predominante">
+            </div>
+            <div class="col-md-4">
+              <label for="condicaoMovel" class="form-label">Condição</label>
+              <select class="form-select" id="condicaoMovel">
+                <option selected disabled>Selecione</option>
+                <option>Novo</option>
+                <option>Usado</option>
+                <option>Restaurado</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="dimensoesMovel" class="form-label">Dimensões (cm)</label>
+              <input type="text" class="form-control" id="dimensoesMovel" placeholder="Ex: 120x80x75">
+            </div>
+            <div class="col-md-3">
+              <label for="pesoMovel" class="form-label">Peso (kg)</label>
+              <input type="number" class="form-control" id="pesoMovel" min="0">
+            </div>
+            <div class="col-md-3">
+              <label for="quantidadeMovel" class="form-label">Estoque</label>
+              <input type="number" class="form-control" id="quantidadeMovel" min="0">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="fotoMovel" class="form-label">Foto do Móvel</label>
+            <input type="file" class="form-control" id="fotoMovel" accept="image/*">
+          </div>
+
+          <button type="submit" class="btn btn-dark mt-3"><i class="bi bi-check2-square"></i> Cadastrar Móvel</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
